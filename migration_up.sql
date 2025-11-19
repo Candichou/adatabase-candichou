@@ -28,6 +28,6 @@ CREATE TABLE skills (
 
 CREATE TABLE resources_skills (
     resources_id INTEGER REFERENCES resources(id),
-    skill_id INTEGER REFERENCES skills(id) 
+    skill_id INTEGER REFERENCES skills(id) adata
 )
 
