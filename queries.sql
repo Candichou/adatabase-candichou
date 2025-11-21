@@ -51,5 +51,14 @@ JOIN resources_skills ON resources.id = resources_skills.resources_id
 JOIN skills ON resources_skills.skill_id = skills.id; */
 
 /* Récupérer les 5 ressources les plus récentes avec leur thème */
+/* SELECT *
+FROM resources
+JOIN themes ON resources.theme_id = themes.id
+ORDER BY resources.update_at DESC
+LIMIT 5; */
 
-
+/* Récupérer toutes les compétences qui ne sont associées à aucune ressource */
+/* SELECT *
+FROM skills
+LEFT JOIN resources_skills ON skills.id = resources_skills.skill_id
+WHERE resources_skills.resources_id IS NULL; */
