@@ -20,7 +20,7 @@ CREATE TABLE resources (
     is_ada BOOLEAN,
     theme_id INTEGER REFERENCES themes(id),
     created_at TIMESTAMP,
-    update_at TIMESTAMP
+    updated_at TIMESTAMP
 );
 
 -- Create a new table 'skills' with a primary key and columns
