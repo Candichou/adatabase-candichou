@@ -1,21 +1,24 @@
+/* -- création du TYPE -- */
+CREATE TYPE resources_types AS ENUM ('guide', 'video', 'exercice', 'project');
+
 -- Create a new table 'themes' with a primary key and columns
 CREATE TABLE themes (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     description VARCHAR(255),
     created_at TIMESTAMP,
-    update_at TIMESTAMP
+    updated_at TIMESTAMP
 );
 
 -- Create a new table 'resources' with a primary key and columns
 CREATE TABLE resources (
     id INTEGER PRIMARY KEY,
-    type TEXT NOT NULL,
+    type resources_types,
     title TEXT NOT NULL,
     description TEXT NOT NULL, 
     url TEXT NOT NULL, 
     is_ada BOOLEAN,
-    theme_id INTEGER REFERENCES themes (id),
+    theme_id INTEGER REFERENCES themes(id),
     created_at TIMESTAMP,
     update_at TIMESTAMP
 );

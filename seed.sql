@@ -1,5 +1,5 @@
 /* Insert thème */
-INSERT INTO themes (id, name, description, created_at, update_at)
+/* INSERT INTO themes (id, name, description, created_at, update_at)
 VALUES
 (1, 'Frontend', 'La salle du restaurant', '2025-06-13 12:05','2025-06-13 13:10'),
 (2, 'Backend', 'La cuisine', '2025-06-13 12:10','2025-06-13 12:45'),
@@ -29,4 +29,4 @@ VALUES
 (2,4),
 (3,1),
 (4,1),
-(4,5);
+(4,5); */

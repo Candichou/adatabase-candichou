@@ -45,10 +45,11 @@ GROUP BY themes.name; */
 
 /* Récupérer le nom et l'url de toutes les ressources avec un tableau/liste contenant l'ensemble de leurs skills associés */
 
-/* SELECT name, url
+SELECT name, url
 FROM resources
 JOIN resources_skills ON resources.id = resources_skills.resources_id
-JOIN skills ON resources_skills.skill_id = skills.id; */
+JOIN skills ON resources_skills.skill_id = skills.id
+WHERE skills.name = 'JavaScript';
 
 /* Récupérer les 5 ressources les plus récentes avec leur thème */
 /* SELECT *
